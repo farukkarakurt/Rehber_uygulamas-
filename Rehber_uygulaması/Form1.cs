@@ -90,6 +90,7 @@ namespace Rehber_uygulaması
             temizle();
         }
 
+        // Ömer faruk karakurt//
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
             baglanti.Open();
