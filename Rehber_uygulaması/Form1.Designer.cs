@@ -53,6 +53,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(16, 26);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -61,6 +62,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "REHBER";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dataGridView1
             // 
@@ -68,12 +70,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(4, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(695, 411);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox2
             // 
@@ -91,6 +95,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(727, 26);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -110,39 +115,47 @@
             // 
             // btn_guncelle
             // 
+            this.btn_guncelle.BackColor = System.Drawing.Color.Gray;
             this.btn_guncelle.Location = new System.Drawing.Point(54, 302);
             this.btn_guncelle.Name = "btn_guncelle";
             this.btn_guncelle.Size = new System.Drawing.Size(122, 29);
             this.btn_guncelle.TabIndex = 5;
             this.btn_guncelle.Text = "GÜNCELLE";
-            this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.UseVisualStyleBackColor = false;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_temizle
             // 
+            this.btn_temizle.BackColor = System.Drawing.Color.Gray;
             this.btn_temizle.Location = new System.Drawing.Point(182, 302);
             this.btn_temizle.Name = "btn_temizle";
             this.btn_temizle.Size = new System.Drawing.Size(122, 29);
             this.btn_temizle.TabIndex = 5;
             this.btn_temizle.Text = "TEMİZLE";
-            this.btn_temizle.UseVisualStyleBackColor = true;
+            this.btn_temizle.UseVisualStyleBackColor = false;
+            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
             // btn_sil
             // 
+            this.btn_sil.BackColor = System.Drawing.Color.Gray;
             this.btn_sil.Location = new System.Drawing.Point(182, 267);
             this.btn_sil.Name = "btn_sil";
             this.btn_sil.Size = new System.Drawing.Size(122, 29);
             this.btn_sil.TabIndex = 5;
             this.btn_sil.Text = "KİŞİ SİL";
-            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.UseVisualStyleBackColor = false;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // btn_ekle
             // 
+            this.btn_ekle.BackColor = System.Drawing.Color.Gray;
             this.btn_ekle.Location = new System.Drawing.Point(54, 267);
             this.btn_ekle.Name = "btn_ekle";
             this.btn_ekle.Size = new System.Drawing.Size(122, 29);
             this.btn_ekle.TabIndex = 5;
             this.btn_ekle.Text = "KİŞİ EKLE";
-            this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.UseVisualStyleBackColor = false;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // txt_mail
             // 
@@ -222,13 +235,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1131, 483);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REHBER";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
